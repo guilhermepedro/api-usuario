@@ -2,6 +2,12 @@ package com.example.usuario.api;
 
 import com.example.usuario.api.model.Usuario;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 public class usuarioDTO {
 	
 	Long id;

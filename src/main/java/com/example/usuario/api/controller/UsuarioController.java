@@ -31,30 +31,29 @@ public class UsuarioController {
 	UsuarioService usuarioService;
 	
 	@GetMapping
-	public List<Usuario> listarUsuario() {
+	public List<usuarioDTO> listarUsuario() {
 		return usuarioService.listarTodos();
 	}
 	
 	@GetMapping ("/{id}")
-	public usuarioDTO listarUsuarioPorID(@PathVariable Long id) {
-		return usuarioService.listarPorID(id);
+	public ResponseEntity<usuarioDTO> listarUsuarioPorID(@PathVariable Long id) {
+		return new ResponseEntity<usuarioDTO>(usuarioService.listarPorID(id), HttpStatus.OK);
 	}
 	
 	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
-	public usuarioDTO cadastrarUsuario(@RequestBody Usuario usuario) {
-		return usuarioService.cadastrarUsuario(usuario);
+	public ResponseEntity<usuarioDTO> cadastrarUsuario(@RequestBody Usuario usuario) {
+		return new ResponseEntity<>(usuarioService.cadastrarUsuario(usuario), HttpStatus.CREATED);
 	}
 	
 	@DeleteMapping ("/{id}")
-	public void deletaUsuario(@PathVariable Long id) {
+	public ResponseEntity<Void> deletaUsuario(@PathVariable Long id) {
 		usuarioService.deletaUsuario(id);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
 	@PutMapping
-	@ResponseBody
-	public ResponseEntity<Usuario> atualizaUsuario(@RequestBody Usuario usuario) {
-		return (ResponseEntity<Usuario>) usuarioService.atualizarUsuario(usuario);
+	public ResponseEntity<usuarioDTO> atualizaUsuario(@RequestBody Usuario usuario) {
+		return new ResponseEntity<usuarioDTO> (usuarioService.atualizarUsuario(usuario), HttpStatus.CREATED);
 		
 	}
 	
