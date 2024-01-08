@@ -21,5 +21,10 @@ public class Medico {
 	String pacientes;
 	String endereco;
 	String especializacao;
+	
+	
+	public Long getId() {
+		return id;
+	}
 
 }
