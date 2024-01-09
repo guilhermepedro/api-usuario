@@ -48,7 +48,7 @@ public class PacienteController {
 	}
 	
 	@PutMapping
-	public ResponseEntity<Paciente> atualizaUsuario(@RequestBody Paciente paciente) {
+	public ResponseEntity<Paciente> atualizaPaciente(@RequestBody Paciente paciente) {
 		return new ResponseEntity<Paciente> (pacienteService.atualizarPaciente(paciente), HttpStatus.CREATED);
 		
 	}
