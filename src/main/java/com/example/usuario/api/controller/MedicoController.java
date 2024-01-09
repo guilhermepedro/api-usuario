@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.usuario.api.model.Medico;
-import com.example.usuario.api.model.Paciente;
 import com.example.usuario.api.service.MedicoService;
 
 
