@@ -71,7 +71,7 @@ Cadastra um novo médico no sistema.
 - `nome` (string): Nome do médico.
 - `endereco` (string): Endereço do médico.
 - `numeroCRM` (number): Número do CRM do médico.
-- `especializacao` (string): Telefone do paciente.
+- `especializacao` (string): Telefone do médico.
 
 **Exemplo de body:**
 json
