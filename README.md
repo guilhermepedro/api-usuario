@@ -1,4 +1,4 @@
-# Documentação da API de gerenciamento de cadastros de médicos e pacientes
+# Documentação da API de gerenciamento de cadastros de médicos e pacientes.
 
 ## Visão Geral
 
@@ -101,7 +101,7 @@ Edita qualquer médico cadastrado no sistema.
 **Endpoint:** DELETE /medico
 
 **Descrição:**
-Deleta quqlquer médico cadastrado no sistema.
+Deleta qualquer médico cadastrado no sistema.
 
 
 
